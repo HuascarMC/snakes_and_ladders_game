@@ -10,6 +10,7 @@ class Token
 
   def move_token(given_position)
     @position += given_position
+    puts @position
     return @position
   end
 

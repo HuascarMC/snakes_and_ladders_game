@@ -7,9 +7,14 @@ class Ladder
     @end_position = end_position
   end
 
+  def start_position
+    return @start_position
+  end
+
   def ladder_moves_token_forward(token)
     if token.position == @start_position
       token.position = @end_position
+      puts "Your token has been moved to position #{@end_position}"
     end
   end
 end
