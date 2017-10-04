@@ -6,18 +6,22 @@ require('minitest/rg')
 
 class TestGame < MiniTest::Test
   def setup
-    positions = (1..25).to_a
     @dice = Dice.new('Dice')
+
     @tokens = Token.new('Player_1')
+
     @ladder_5 = Ladder.new(5, 15)
-    @ladder_10 = Ladder.new(10, 20)
-    ladders = [@ladder_5, @ladder_10]
-    @board = Board.new('Snakes and Ladders', positions, @tokens, ladders)
+    @ladder_10 = Ladder.new(13, 22)
+
+    @snake_20 = Snake.new(20, 10)
+    @snake_7 = Snake.new(7, 2)
+
+    positions = (0..25).to_a
+    @board = Board.new('Snakes and Ladders', positions)
   end
 
-  def test_move_token_on_board
-    @token.token_move_position(@dice)
-    @token.token_move_position(@dice)
-    @token.token_move_position(@dice)
+  def test_game
+    @token.move_token(@dice)
+
   end
 end

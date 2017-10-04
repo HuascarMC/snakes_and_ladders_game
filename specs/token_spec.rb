@@ -18,7 +18,11 @@ class TestToken < MiniTest::Test
   end
 
   def test_move_token
-    @token.move_token(@dice)
+    assert_equal(7, @token.move_token(7))
+  end
+
+  def test_move_token_with_dice
+    @token.move_token(@dice.roll_dice)
     assert(0 < @token.position())
   end
 

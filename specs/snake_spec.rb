@@ -19,6 +19,7 @@ class SnakeTest < MiniTest::Test
   end
 
   def test_snake_moves_token_back
-    assert_equal(@snake_20.end_position, @token.position())
+    @snake_20.snake_moves_token_back(@token)
+   assert_equal(@snake_20.end_position, @token.position())
   end
 end
