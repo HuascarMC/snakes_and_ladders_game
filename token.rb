@@ -3,16 +3,16 @@ class Token
   attr_reader :name
   attr_accessor :position
 
-  def initialize(name, position)
+  def initialize(name)
     @name = name
-    @position = position
+    @position = 0
   end
 
-  def token_move_position(dice)
+  def move_token(dice)
     dice_result = dice.roll_dice
-    @position = (@position + dice_result)
-    puts @position
-    return position
+    @position += dice_result
+    # puts @position
+    return @position
   end
 
 end

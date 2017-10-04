@@ -5,7 +5,7 @@ require('minitest/rg')
 
 class TestToken < MiniTest::Test
   def setup
-    @token = Token.new('Player_1', 0)
+    @token = Token.new('Player_1')
     @dice = Dice.new('Dice')
   end
 
@@ -17,10 +17,10 @@ class TestToken < MiniTest::Test
     assert_equal(0, @token.position())
   end
 
-  def test_token_move_position
-    result = @token.token_move_position(@dice)
-    # result2 = @board.positions += @token.token_move_position
-    assert_equal(@token.position, result)
+  def test_move_token
+    @token.move_token(@dice)
+    assert(0 < @token.position())
   end
+
 
 end
