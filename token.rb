@@ -10,15 +10,7 @@ class Token
 
   def move_token(given_position)
     @position += given_position
-    puts @position
+    puts "Your token has been moved to position #{@position}"
     return @position
   end
-
-  # def move_token(dice)
-  #   dice_result = dice.roll_dice
-  #   @position += dice_result
-  #   # puts @position
-  #   return @position
-  # end
-
 end

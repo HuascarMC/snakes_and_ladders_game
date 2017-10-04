@@ -30,11 +30,23 @@ class TestGame < MiniTest::Test
     assert_equal(1, @game.score)
   end
 
-  # def test_game_says_rolling
-  #   assert_equal("Dice is rolling!", @game.say_roll)
-  # end
 
   def test_game
+    @game.say_roll()
+    @token.move_token(@dice.roll_dice)
+    @board.board_checks_token_position(@token)
+    @game.say_roll()
+    @token.move_token(@dice.roll_dice)
+    @board.board_checks_token_position(@token)
+    @game.say_roll()
+    @token.move_token(@dice.roll_dice)
+    @board.board_checks_token_position(@token)
+    @game.say_roll()
+    @token.move_token(@dice.roll_dice)
+    @board.board_checks_token_position(@token)
+    @game.say_roll()
+    @token.move_token(@dice.roll_dice)
+    @board.board_checks_token_position(@token)
     @game.say_roll()
     @token.move_token(@dice.roll_dice)
     @board.board_checks_token_position(@token)

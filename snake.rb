@@ -10,7 +10,7 @@ class Snake
   def snake_moves_token_back(token)
     if token.position == @start_position
       token.position = @end_position
-      puts "Your token has been moved to position #{@end_position}"
+      puts "A snake moved your token to position #{@end_position}"
     end
   end
 end
