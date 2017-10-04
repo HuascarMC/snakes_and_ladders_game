@@ -26,6 +26,11 @@ class TestBoard < MiniTest::Test
     assert_equal('Snakes and Ladders', @board.name)
   end
 
+  def test_add_point
+    @game.add_point()
+    assert_equal(1, @game.score)
+  end
+
   def test_board_checks_token_on_ladder_5
     @token.move_token(5)
     @board.board_checks_token_position(@token)

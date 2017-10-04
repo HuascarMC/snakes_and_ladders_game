@@ -1,20 +1,15 @@
 class Game
-  attr_reader :name, :score
+  attr_reader :name
   def initialize(name)
     @name = name
-    @score = 0
   end
 
-  def add_point
-      @score += 1
-  end
 
   def say_roll
-    puts "Type roll to roll dice"
+      puts "Type roll to roll dice"
     roll = gets.chomp
     if roll == "roll"
-     puts "Dice is rolling!"
-
+      puts "Dice is rolling!"
     end
   end
 end
