@@ -26,10 +26,6 @@ class TestBoard < MiniTest::Test
     assert_equal('Snakes and Ladders', @board.name)
   end
 
-  def test_check_token_lands_ladder
-    @token.move_token(@dice)
-    assert_equal(@ladder_5.start_position, @token.position())
-  end
 
 
   # def test_move_token_up_ladder

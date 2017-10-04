@@ -8,6 +8,8 @@ class Snake
   end
 
   def snake_moves_token_back(token)
-    token.position = @end_position
+    if token.position == @start_position
+      token.position = @end_position
+    end
   end
 end

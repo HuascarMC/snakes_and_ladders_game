@@ -8,7 +8,8 @@ class Ladder
   end
 
   def ladder_moves_token_forward(token)
-    token.position = @end_position
-
+    if token.position == @start_position
+      token.position = @end_position
+    end
   end
 end
