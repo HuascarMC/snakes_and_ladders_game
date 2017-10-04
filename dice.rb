@@ -8,7 +8,7 @@ class Dice
   end
 
   def roll_dice
-      return @numbers_in_dice.sample
+    @numbers_in_dice.sample
   end
 
 end

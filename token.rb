@@ -9,9 +9,10 @@ class Token
   end
 
   def token_move_position(dice)
-    result = dice.roll_dice
-    @position = @position + result
-    return @position
+    dice_result = dice.roll_dice
+    @position = (@position + dice_result)
+    puts @position
+    return position
   end
 
 end

@@ -13,4 +13,5 @@ class TestBoard < MiniTest::Test
   def test_board_name
     assert_equal('Snakes and Ladders', @board.name)
   end
+
 end
