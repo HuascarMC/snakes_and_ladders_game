@@ -7,8 +7,10 @@ class Board
    @score = 0
  end
 
- def add_point
+ def add_point(token)
+   if token.position >= 25
      @score += 1
+   end
  end
 
  def board_checks_token_position(token)
@@ -25,9 +27,6 @@ class Board
 
    elsif token.position == 19
      @positions[3].snake_moves_token_back(token)
-
-   elsif (token.position >= 25)
-     puts "You've won!"
    end
   return nil
  end

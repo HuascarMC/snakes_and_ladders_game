@@ -25,96 +25,53 @@ class TestGame < MiniTest::Test
     @board = Board.new('Snakes and Ladders', positions)
   end
 
+
+
+  def test_player_results_won
+    @token.move_token(25)
+    @board.add_point(@token)
+    assert_equal("+", @game.player_results(@board))
+  end
+
+  def test_player_results_lost
+    assert_equal("-", @game.player_results(@board))
+  end
+
   def test_game
-    @game.say_roll()
+    @game.say_roll(@board)
     @token.move_token(@dice.roll_dice)
     @board.board_checks_token_position(@token)
-    @game.say_roll()
+
+
+    @game.say_roll(@board)
     @token.move_token(@dice.roll_dice)
     @board.board_checks_token_position(@token)
-    @game.say_roll()
+
+
+    @game.say_roll(@board)
     @token.move_token(@dice.roll_dice)
     @board.board_checks_token_position(@token)
-    @game.say_roll()
+
+
+    @game.say_roll(@board)
     @token.move_token(@dice.roll_dice)
     @board.board_checks_token_position(@token)
-    @game.say_roll()
+
+
+    @game.say_roll(@board)
     @token.move_token(@dice.roll_dice)
     @board.board_checks_token_position(@token)
-    @game.say_roll()
+
+
+    @game.say_roll(@board)
     @token.move_token(@dice.roll_dice)
     @board.board_checks_token_position(@token)
-    @game.say_roll()
+
+
+    @game.say_roll(@board)
     @token.move_token(@dice.roll_dice)
     @board.board_checks_token_position(@token)
-    @game.say_roll()
-    @token.move_token(@dice.roll_dice)
-    @board.board_checks_token_position(@token)
-    @game.say_roll()
-    @token.move_token(@dice.roll_dice)
-    @board.board_checks_token_position(@token)
-    @game.say_roll()
-    @token.move_token(@dice.roll_dice)
-    @board.board_checks_token_position(@token)
-    @game.say_roll()
-    @token.move_token(@dice.roll_dice)
-    @board.board_checks_token_position(@token)
-    @game.say_roll()
-    @token.move_token(@dice.roll_dice)
-    @board.board_checks_token_position(@token)
-    @game.say_roll()
-    @token.move_token(@dice.roll_dice)
-    @board.board_checks_token_position(@token)
-    @game.say_roll()
-    @token.move_token(@dice.roll_dice)
-    @board.board_checks_token_position(@token)
-    @game.say_roll()
-    @token.move_token(@dice.roll_dice)
-    @board.board_checks_token_position(@token)
-    @game.say_roll()
-    @token.move_token(@dice.roll_dice)
-    @board.board_checks_token_position(@token)
-    @game.say_roll()
-    @token.move_token(@dice.roll_dice)
-    @board.board_checks_token_position(@token)
-    @game.say_roll()
-    @token.move_token(@dice.roll_dice)
-    @board.board_checks_token_position(@token)
-    @game.say_roll()
-    @token.move_token(@dice.roll_dice)
-    @board.board_checks_token_position(@token)
-    @game.say_roll()
-    @token.move_token(@dice.roll_dice)
-    @board.board_checks_token_position(@token)
-    @game.say_roll()
-    @token.move_token(@dice.roll_dice)
-    @board.board_checks_token_position(@token)
-    @game.say_roll()
-    @token.move_token(@dice.roll_dice)
-    @board.board_checks_token_position(@token)
-    @game.say_roll()
-    @token.move_token(@dice.roll_dice)
-    @board.board_checks_token_position(@token)
-    @game.say_roll()
-    @token.move_token(@dice.roll_dice)
-    @board.board_checks_token_position(@token)
-    @game.say_roll()
-    @token.move_token(@dice.roll_dice)
-    @board.board_checks_token_position(@token)
-    @game.say_roll()
-    @token.move_token(@dice.roll_dice)
-    @board.board_checks_token_position(@token)
-    @game.say_roll()
-    @token.move_token(@dice.roll_dice)
-    @board.board_checks_token_position(@token)
-    @game.say_roll()
-    @token.move_token(@dice.roll_dice)
-    @board.board_checks_token_position(@token)
-    @game.say_roll()
-    @token.move_token(@dice.roll_dice)
-    @board.board_checks_token_position(@token)
-    @game.say_roll()
-    @token.move_token(@dice.roll_dice)
-    @board.board_checks_token_position(@token)
+    @board.add_point(@token)
+    @game.player_results(@board)
   end
 end
