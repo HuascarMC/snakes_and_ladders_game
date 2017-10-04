@@ -15,11 +15,11 @@ class LadderTest < MiniTest::Test
   end
 
   def test_ladder_end_position
-    assert_equal(22, @ladder_10.end_position())
+    assert_equal(22, @ladder_13.end_position())
   end
 
   def test_ladder_moves_token_forwards
-    @ladder_10.ladder_moves_token_forward(@token)
-    assert_equal(@ladder_10.end_position(), @token.position())
+    @ladder_13.ladder_moves_token_forward(@token)
+    assert_equal(@ladder_13.end_position, @token.position())
   end
 end

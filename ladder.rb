@@ -6,4 +6,9 @@ class Ladder
     @start_position = start_position
     @end_position = end_position
   end
+
+  def ladder_moves_token_forward(token)
+    token.position = @end_position
+
+  end
 end
